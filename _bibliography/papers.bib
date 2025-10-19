@@ -1,43 +1,149 @@
----
----
 
 
-@inproceedings{fourmy2019absolute,
-  abbr={AbsoluteLoca},
-  title={Absolute humanoid localization and mapping based on IMU Lie group and fiducial markers},
-  author={Fourmy, M{\'e}d{\'e}ric and Atchuthan, Dinesh and Mansard, Nicolas and Sola, Joan and Flayols, Thomas},
-  abstract={Current locomotion algorithms in structured (indoor) 3D environments require an accurate localization. The
-several and diverse sensors typically embedded on legged robots
-(IMU, coders, vision and/or LIDARS) should make it possible
-if properly fused. Yet this is a difficult task due to the heterogeneity of these sensors and the real-time requirement of the
-control. While previous works were using staggered approaches
-(odometry at high frequency, sparsely corrected from vision and
-LIDAR localization), the recent progress in optimal estimation,
-in particular in visual-inertial localization, is paving the way to
-a holistic fusion. This paper is a contribution in this direction.
-We propose to quantify how a visual-inertial navigation system
-can accurately localize a humanoid robot in a 3D indoor
-environment tagged with fiducial markers. We introduce a theoretical contribution strengthening the formulation of Forster’s
-IMU pre-integration, a practical contribution to avoid possible
-ambiguity raised by pose estimation of fiducial markers, and an
-experimental contribution on a humanoid dataset with ground
-truth. Our system is able to localize the robot with less than 2 cm
-errors once the environment is properly mapped. This would
-naturally extend to additional measurements corresponding to
-leg odometry (kinematic factors) thanks to the genericity of the
-proposed pre-integration algebra.},
-  booktitle={IEEE-RAS 19th International Conference on Humanoid Robots (Humanoids)},
-  pages={237--243},
-  year={2019},
-  organization={IEEE},
-  html={https://ieeexplore.ieee.org/document/9035005},
-  pdf={https://hal.archives-ouvertes.fr/hal-02183498/document},
+@article{tyree2025bop,
+  title={BOP Challenge 2024 on Model-Based and Model-Free 6D Object Pose Estimation},
+  author={Tyree, Stephen and Guo, Andrew and Fourmy, M{\'e}d{\'e}ric and Gouda, Anas and Lee, Taeyeop and Moon, Sungphill and Son, Hyeontae and Ranftl, Lukas and Tremblay, Jonathan and Brachmann, Eric and others},
+  journal={CoRR},
+  year={2025},
+  abstract={We present the evaluation methodology, datasets and results of the BOP Challenge 2024, the 6th in a series of public competitions organized to capture the state of the art in 6D object pose estimation and related tasks. In 2024, our goal was to transition BOP from lab-like setups to real-world scenarios. First, we introduced new model-free tasks, where no 3D object models are available and methods need to onboard objects just from provided reference videos. Second, we defined a new, more practical 6D object detection task where identities of objects visible in a test image are not provided as input. Third, we introduced new BOP-H3 datasets recorded with high-resolution sensors and AR/VR headsets, closely resembling real-world scenarios. BOP-H3 include 3D models and onboarding videos to support both model-based and model-free tasks. Participants competed on seven challenge tracks. Notably, the best 2024 method for model-based 6D localization of unseen objects (FreeZeV2.1) achieves 22% higher accuracy on BOP-Classic-Core than the best 2023 method (GenFlow), and is only 4% behind the best 2023 method for seen objects (GPose2023) although being significantly slower (24.9 vs 2.7s per image). A more practical 2024 method for this task is Co-op which takes only 0.8s per image and is 13% more accurate than GenFlow. Methods have similar rankings on 6D detection as on 6D localization but higher run time. On model-based 2D detection of unseen objects, the best 2024 method (MUSE) achieves 21--29% relative improvement compared to the best 2023 method (CNOS). However, the 2D detection accuracy for unseen objects is still -35% behind the accuracy for seen objects (GDet2023), and the 2D detection stage is consequently the main bottleneck of existing pipelines for 6D localization/detection of unseen objects.},
+  preview={bop_logo.png},
+  pdf={https://arxiv.org/pdf/2504.02812},
+  website={https://bop.felk.cvut.cz/challenges/bop-challenge-2024},
   selected={true}
 }
 
 
+@article{ponimatkin20256d,
+  title={FreePose: 6D Object Pose Tracking in Internet Videos for Robotic Manipulation},
+  author={Ponimatkin, Georgy and C{\'\i}fka, Martin and Sou{\v{c}}ek, Tom{\'a}{\v{s}} and Fourmy, M{\'e}d{\'e}ric and Labb{\'e}, Yann and Petrik, Vladimir and Sivic, Josef},
+  journal={ICLR},
+  year={2025},
+  pdf={https://arxiv.org/pdf/2503.10307},
+  website={https://ponimatkin.github.io/freepose/},
+  preview={preview_freepose.png},
+  selected={true}
+}
+
+@ARTICLE{10758211,
+  author={Zorina, Kateryna and Priban, Vojtech and Fourmy, M{\'e}d{\'e}ric and Sivic, Josef and Petrik, Vladimir},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={Temporally Consistent Object 6D Pose Estimation for Robot Control}, 
+  year={2025},
+  volume={10},
+  number={1},
+  pages={56-63},
+  keywords={Cameras;Robots;Pose estimation;Robot vision systems;Robot control;Probabilistic logic;Uncertainty;Smoothing methods;Predictive models;Computational modeling;Computer vision for automation;visual tracking},
+  doi={10.1109/LRA.2024.3502052},
+  abstract={Single-view RGB object pose estimators have reached a level of precision and efficiency that makes them good candidates for vision-based robot control. However, off-the-shelf methods lack temporal consistency and robustness that are mandatory for a stable feedback control. In this work, we develop a factor graph approach to enforce temporal consistency of the object pose estimates. In particular, the proposed approach: (i) incorporates object motion models, (ii) explicitly estimates the object pose measurement uncertainty, and (iii) integrates the above two components in an online optimization-based estimator. We demonstrate that with appropriate outlier rejection and smoothing using the proposed factor graph approach, we can significantly improve the results on standardized pose estimation benchmarks. We experimentally validate the stability of the proposed approach for a feedback-based robot control task in which the object is tracked by the camera attached to a torque controlled manipulator.},
+  pdf={https://data.ciirc.cvut.cz/public/projects/2024TemporalPose/paper.pdf},
+  website={https://data.ciirc.cvut.cz/public/projects/2024TemporalPose/},
+  preview={preview_tempo_pose.png},
+  selected={true}
+}
+
+
+@INPROCEEDINGS{10597485,
+  author={Haffemayer, Arthur and Jordana, Armand and Fourmy, Médéric and Wojciechowski, Krzysztof and Saurel, Guilhem and Petrik, Vladimir and Lamiraux, Florent and Mansard, Nicolas},
+  booktitle={2024 21st International Conference on Ubiquitous Robots (UR)}, 
+  title={Model Predictive Control Under Hard Collision Avoidance Constraints for a Robotic Arm}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={701-706},
+  keywords={Robot motion;Perturbation methods;Design methodology;Dynamics;Complexity theory;Collision avoidance;Task analysis},
+  doi={10.1109/UR61395.2024.10597485},
+  abstract={We design a method to control the motion of a
+manipulator robot while strictly enforcing collision avoidance
+in a dynamic obstacle field. We rely on model predictive control
+while formulating collision avoidance as a hard constraint. We
+express the constraint as the requirement for a signed distance
+function to be positive between pairs of strictly convex objects.
+Among various formulations, we provide a suitable definition
+for this signed distance and the analytical derivatives the
+numerical solver needs to enforce the constraint. The method
+is completely implemented on a manipulator ”Panda” robot,
+and the efficient open-source implementation is provided along
+with the paper. We experimentally demonstrate the efficiency
+of our approach by performing dynamic tasks in an obstacle
+field while reacting to non-modeled perturbations.},
+  pdf={https://laas.hal.science/hal-04425002v2/document},
+  preview={preview_colmpc.png},
+  selected={true}
+}
+
+
+@article{fourmy2023visually,
+  title={Visually Guided Model Predictive Robot Control via 6D Object Pose Localization and Tracking},
+  author={Fourmy, M{\'e}d{\'e}ric and Priban, Vojtech and Behrens, Jan Kristof and Mansard, Nicolas and Sivic, Josef and Petrik, Vladimir},
+  journal={arXiv preprint arXiv:2311.05344},
+  year={2023},
+  abstract={The objective of this work is to enable manipulation tasks with respect to the 6D pose of a dynamically
+moving object using a camera mounted on a robot. Examples
+include maintaining a constant relative 6D pose of the robot
+arm with respect to the object, grasping the dynamically
+moving object, or co-manipulating the object together with
+a human. Fast and accurate 6D pose estimation is crucial to
+achieve smooth and stable robot control in such situations. The
+contributions of this work are three fold. First, we propose a
+new visual perception module that asynchronously combines
+accurate learning-based 6D object pose localizer and a highrate model-based 6D pose tracker. The outcome is a low-latency
+accurate and temporally consistent 6D object pose estimation
+from the input video stream at up to 120 Hz. Second, we develop
+a visually guided robot arm controller that combines the new
+visual perception module with a torque-based model predictive
+control algorithm. Asynchronous combination of the visual and
+robot proprioception signals at their corresponding frequencies
+results in stable and robust 6D object pose guided robot
+arm control. Third, we experimentally validate the proposed
+approach on a challenging 6D pose estimation benchmark and
+demonstrate 6D object pose-guided control with dynamically
+moving objects on a real 7 DoF Franka Emika Panda robot.},
+  pdf={https://arxiv.org/pdf/2311.05344},
+  preview={preview_visual_MPC.png},
+  selected={true}
+}
+
+
+@article{sola2021wolf,
+  title={WOLF: A modular estimation framework for robotics based on factor graphs},
+  author={Sola, Joan and Vallve, Joan and Casals, Joaquim and Deray, Jeremie and Fourmy, M{\'e}d{\'e}ric and Atchuthan, Dinesh and Corominas-Murtra, Andreu and Andrade-Cetto, Juan},
+  journal={IEEE Robotics and Automation Letters},
+  year={2022},
+  publisher={IEEE},
+  abstract={This paper introduces WOLF, a C++ estimation
+framework based on factor graphs and targeted at mobile
+robotics. WOLF extends the applications of factor graphs from
+the typical problems of SLAM and odometry to a general
+estimation framework able to handle self-calibration, model
+identification, or the observation of dynamic quantities other
+than localization. WOLF produces high throughput estimates
+at sensor rates up to the kHz range, which can be used for
+feedback control of highly dynamic robots such as humanoids,
+quadrupeds or aerial manipulators. Departing from the factor
+graph paradigm, the architecture of WOLF allows for a modular
+yet tightly-coupled estimator. Modularity is based on plugins
+that are loaded at runtime. Then, integration is achieved simply
+through YAML files, allowing users to configure a wide range
+of applications without the need of writing or compiling code.
+Synchronization of incoming data and their processing into
+a unique factor graph is achieved through a decentralized
+strategy of frame creation and joining. Most algorithmic assets
+are coded as abstract algorithms in base classes with varying
+levels of specialization. Overall, these assets allow for coherent
+processing and favor code reusability and scalability. WOLF can
+be interfaced with different solvers, and we provide a wrapper
+to Google Ceres. Likewise, we offer ROS integration, providing
+a generic ROS node and specialized packages with subscribers
+and publishers. WOLF is made publicly available and open to
+collaboration.},
+  preview={preview_WOLF.png},
+  pdf={https://arxiv.org/pdf/2110.12919.pdf},
+  selected={true},
+}
+
+
+
 @inproceedings{fourmy2021contact,
-  abbr={ContactPreint},
   title={Contact Forces Preintegration for Estimation in Legged Robotics using Factor Graphs},
   author={Fourmy, M{\'e}d{\'e}ric and Flayols, Thomas and L{\'e}ziart, Pierre-Alexandre and Mansard, Nicolas and Sol{\`a}, Joan},
   abstract={State estimation, in particular estimation of the
@@ -72,61 +178,41 @@ Solo12 quadruped robot},
   pages={1372--1378},
   year={2021},
   organization={IEEE},
-  html={https://ieeexplore.ieee.org/abstract/document/9561037},
   pdf={https://hal.archives-ouvertes.fr/hal-02991717/document},
+  preview={preview_factor_graph.png},
   selected={true}
 }
 
 
-@article{sola2021wolf,
-  abbr={WOLF},
-  title={WOLF: A modular estimation framework for robotics based on factor graphs},
-  author={Sola, Joan and Vallve, Joan and Casals, Joaquim and Deray, Jeremie and Fourmy, M{\'e}d{\'e}ric and Atchuthan, Dinesh and Corominas-Murtra, Andreu and Andrade-Cetto, Juan},
-  journal={IEEE Robotics and Automation Letters},
-  year={2022},
-  publisher={IEEE},
-  abstract={This paper introduces WOLF, a C++ estimation
-framework based on factor graphs and targeted at mobile
-robotics. WOLF extends the applications of factor graphs from
-the typical problems of SLAM and odometry to a general
-estimation framework able to handle self-calibration, model
-identification, or the observation of dynamic quantities other
-than localization. WOLF produces high throughput estimates
-at sensor rates up to the kHz range, which can be used for
-feedback control of highly dynamic robots such as humanoids,
-quadrupeds or aerial manipulators. Departing from the factor
-graph paradigm, the architecture of WOLF allows for a modular
-yet tightly-coupled estimator. Modularity is based on plugins
-that are loaded at runtime. Then, integration is achieved simply
-through YAML files, allowing users to configure a wide range
-of applications without the need of writing or compiling code.
-Synchronization of incoming data and their processing into
-a unique factor graph is achieved through a decentralized
-strategy of frame creation and joining. Most algorithmic assets
-are coded as abstract algorithms in base classes with varying
-levels of specialization. Overall, these assets allow for coherent
-processing and favor code reusability and scalability. WOLF can
-be interfaced with different solvers, and we provide a wrapper
-to Google Ceres. Likewise, we offer ROS integration, providing
-a generic ROS node and specialized packages with subscribers
-and publishers. WOLF is made publicly available and open to
-collaboration.},
-  pdf={https://arxiv.org/pdf/2110.12919.pdf},
-  selected={true},
-}
-
-
-@unpublished{debeunne:hal-03351438,
-  abbr={CosySLAM},
-  TITLE = {CosySlam: investigating object-level SLAM for detecting locomotion surfaces},
-  AUTHOR = {Debeunne, C{\'e}sar and Fourmy, M{\'e}d{\'e}ric and Labb{\'e}, Yann and L{\'e}ziart, Pierre-Alexandre and Saurel, Guilhem and Sol{\`a}, Joan and Mansard, Nicolas},
-  abstract={While blindfolded legged locomotion has demonstrated impressive capabilities in the last few years, further progresses are expected from using exteroceptive perception to better adapt the robot behavior to the available surfaces of contact. In this paper, we investigate whether mono cameras are suitable sensors for that aim. We propose to rely on object-level SLAM, fusing RGB images and inertial measurements, to simultaneously estimate the robot balance state (orientation in the gravity field and velocity), the robot position, and the location of candidate contact surfaces. We used CosyPose, a learning-based object pose estimator for which we propose an empirical uncertainty model, as the sole front-end of our visual inertial SLAM. We then combine it with inertial measurements which ideally complete the system observability, although extending the proposed approach would be straightforward (e.g. kinematic information about the contact, or a feature based visual front end). We demonstrate the interest of object-based SLAM on several locomotion sequences, by some absolute metrics and in comparison with other mono SLAM.},
-  URL = {https://hal.archives-ouvertes.fr/hal-03351438},
-  journal={},
-  NOTE = {working paper or preprint},
-  HAL_LOCAL_REFERENCE = {Rapport LAAS n{\textdegree} 21255},
-  PDF = {https://hal.archives-ouvertes.fr/hal-03351438v2/document},
-  HAL_ID = {hal-03351438},
-  HAL_VERSION = {v1},
+@inproceedings{fourmy2019absolute,
+  title={Absolute humanoid localization and mapping based on IMU Lie group and fiducial markers},
+  author={Fourmy, M{\'e}d{\'e}ric and Atchuthan, Dinesh and Mansard, Nicolas and Sola, Joan and Flayols, Thomas},
+  abstract={Current locomotion algorithms in structured (indoor) 3D environments require an accurate localization. The
+several and diverse sensors typically embedded on legged robots
+(IMU, coders, vision and/or LIDARS) should make it possible
+if properly fused. Yet this is a difficult task due to the heterogeneity of these sensors and the real-time requirement of the
+control. While previous works were using staggered approaches
+(odometry at high frequency, sparsely corrected from vision and
+LIDAR localization), the recent progress in optimal estimation,
+in particular in visual-inertial localization, is paving the way to
+a holistic fusion. This paper is a contribution in this direction.
+We propose to quantify how a visual-inertial navigation system
+can accurately localize a humanoid robot in a 3D indoor
+environment tagged with fiducial markers. We introduce a theoretical contribution strengthening the formulation of Forster’s
+IMU pre-integration, a practical contribution to avoid possible
+ambiguity raised by pose estimation of fiducial markers, and an
+experimental contribution on a humanoid dataset with ground
+truth. Our system is able to localize the robot with less than 2 cm
+errors once the environment is properly mapped. This would
+naturally extend to additional measurements corresponding to
+leg odometry (kinematic factors) thanks to the genericity of the
+proposed pre-integration algebra.},
+  booktitle={IEEE-RAS 19th International Conference on Humanoid Robots (Humanoids)},
+  pages={237--243},
+  year={2019},
+  organization={IEEE},
+  pdf={https://hal.archives-ouvertes.fr/hal-02183498/document},
+  preview={preview_absolute_loca.png},
   selected={true}
 }
+
