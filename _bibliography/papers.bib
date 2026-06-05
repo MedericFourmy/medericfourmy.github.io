@@ -46,6 +46,13 @@
   author={Ponimatkin, Georgy and C{\'\i}fka, Martin and Sou{\v{c}}ek, Tom{\'a}{\v{s}} and Fourmy, M{\'e}d{\'e}ric and Labb{\'e}, Yann and Petrik, Vladimir and Sivic, Josef},
   journal={ICLR},
   year={2025},
+  abstract={We seek to extract a temporally consistent 6D pose trajectory of a manipulated  object from an Internet instructional video. This is a challenging set-up for current 6D pose estimation methods due to uncontrolled capturing conditions, fine-grained dynamic object motions, and the fact that
+  the exact mesh of the manipulated object is not known. 
+  To address these challenges, we present the following contributions.
+  First, we develop a new method that estimates the 6D pose of any object in the input image without prior knowledge of the object itself. The method proceeds by (i) retrieving a CAD model similar to the depicted object from a large-scale model database, (ii) 6D aligning the retrieved CAD model with the input image, and (iii) grounding the absolute scale of the object with respect to the scene.
+  Second, we extract smooth 6D object trajectories from Internet videos by carefully tracking the detected objects across video frames. The extracted object trajectories are then retargeted via trajectory optimization into the configuration space of a robotic manipulator.
+  Third, we thoroughly evaluate and ablate our 6D pose estimation method on YCB-V and HOPE-Video datasets and demonstrate significant improvements over existing state-of-the-art RGB 6D pose estimation methods. 
+  Finally, we show that the 6D object motion estimated from Internet videos can be transferred to a 7-axis robotic manipulator both in a virtual simulator as well as in the real world. Additionally, we successfully apply our method to egocentric videos taken from the EPIC-KITCHENS dataset, demonstrating potential for Embodied AI applications.},
   pdf={https://arxiv.org/pdf/2503.10307},
   website={https://ponimatkin.github.io/freepose/},
   preview={preview_freepose.png},
